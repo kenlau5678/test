@@ -104,7 +104,10 @@
         var b = window.localStorage.getItem('2')
         var c = window.localStorage.getItem('3')
         var d = window.localStorage.getItem('4')
+
+
         var div = document.querySelectorAll(".divSquare")
+        div[0].className = "divSquare blue"
         if(a=="true")
         {
             div[0].className = "divSquare red"
@@ -121,6 +124,8 @@
         {
             div[3].className = "divSquare green"
         }
+
+
         //使用本地文件
         function useLocal() {
             reader.style.display = "none";
