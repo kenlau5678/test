@@ -135,8 +135,10 @@
             {
                 div[0].className = "divSquare red"
                 window.localStorage.setItem('1', "true")
+                
+                window.location.href="1.html";
+
                 reader.style.display = "none";
-                window.location.href="1.html"
             }
             if(decodedText== "2号拼图")
             {
