@@ -1,5 +1,8 @@
 
-
+html,body{
+    overflow: hidden;
+    height: 100%;
+  }
 .content{
     display: none;
     width: 300px; height: 600px;
@@ -8,7 +11,7 @@
     margin-left: -150px;    /* 宽度的一半 */
     background-image: url("../asset/信纸.png");
     background-size: cover;
-    background-size:100% 100%;
+    background-size:100% 100% ;
     background-repeat: no-repeat;
    }
 

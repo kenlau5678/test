@@ -2,7 +2,10 @@
 html,body{
     width:100%;
     height:100%;
+    overflow: hidden;
+    height: 100%;
   }
+
 body {
     background: url(../asset/网页底图.png);
     background-repeat: no-repeat;
@@ -91,5 +94,7 @@ width:48%; height:200px; margin:4px; border:1px solid black; float: left
     height:300px;
     width: auto;
 }
+
+
 
  
