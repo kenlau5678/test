@@ -128,6 +128,7 @@
 
         //扫码解析成功后按照自己的需求做后续的操作
         function onScanSuccess(decodedText, decodedResult) {
+            reader.style.display = "none";
             res.innerText = "扫码成功结果:\n" + decodedText;
 
             var div = document.querySelectorAll(".divSquare")
@@ -138,7 +139,7 @@
                 
                 window.location.href="1.html";
 
-                reader.style.display = "none";
+               
             }
             if(decodedText== "2号拼图")
             {
