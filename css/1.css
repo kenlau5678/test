@@ -1,0 +1,22 @@
+
+
+.content{
+    display: none;
+    width: 300px; height: 600px;
+    position: absolute; left: 50%; top: 50%;
+    margin-top: -300px;    /* 高度的一半 */
+    margin-left: -150px;    /* 宽度的一半 */
+    background-image: url("../asset/信纸.png");
+    background-size: cover;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+   }
+
+.three{
+    text-align: center;
+    margin-top: 10%;
+}
+.three img{
+    height: 40px;
+    width: auto;
+}
