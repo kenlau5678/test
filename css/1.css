@@ -1,18 +1,22 @@
-
+*{
+    margin: 0;
+    padding: 0;
+}
 html,body{
     overflow: hidden;
     height: 100%;
   }
 .content{
     display: none;
-    width: 300px; height: 600px;
+    width: 300px; height: 400px;
     position: absolute; left: 50%; top: 50%;
-    margin-top: -300px;    /* 高度的一半 */
+    margin-top: -200px;    /* 高度的一半 */
     margin-left: -150px;    /* 宽度的一半 */
     background-image: url("../asset/信纸.png");
     background-size: cover;
     background-size:100% 100% ;
     background-repeat: no-repeat;
+    text-align: center;
    }
 
 .three{
@@ -22,4 +26,88 @@ html,body{
 .three img{
     height: 40px;
     width: auto;
+}
+
+.button{
+    width:30px; 
+    height:30px; 
+    margin:4px; 
+    border:1px solid black; 
+    float: left
+}
+
+.buttons{
+    text-align: center;
+}
+.buttons button{
+    display:inline-block; 
+    width: 100px; 
+    height:100px; 
+    margin:5px;
+
+}
+
+.content .question{
+    text-align: center;
+    margin: 0 auto;
+    width: 250px;
+}
+
+.question p{
+    display: inline-block;
+
+vertical-align: middle;
+
+text-align: left
+}
+
+.content .answer{
+    width: 240px; 
+    height:100px; 
+    background-color:  #f0cc6b;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom: 5%;
+}
+
+.content .continue{
+    width: 300px;
+    height: 50px;
+    float: right;
+    position:relative;
+    right: 5%;
+    top: 40%;
+    text-align: right;
+}
+
+.continue p{
+    display:inline-block; 
+} 
+
+.content img{
+    height:20px;
+    width: auto;
+}
+
+.content .fin{
+    text-align: center;
+}
+
+.fin img{
+    height: 40px;
+    width: auto;
+}
+.back img{
+    height: 220px;
+    width: auto;
+}
+
+.content .end{
+    width: 300px;
+    height: 50px;
+    
+    position:relative;
+    top: 80%;
+
 }
