@@ -25,7 +25,7 @@
         let res = document.getElementById('qr-reader-results');
         let uploadInput = document.getElementById('upload-input');
         let config = { fps: 10, qrbox: { width: 300, height: 280 } }; //扫一扫相关设置
-        window.location.reload()
+        
 
         var a = window.localStorage.getItem('1')
         var b = window.localStorage.getItem('2')
