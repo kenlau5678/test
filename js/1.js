@@ -40,8 +40,9 @@ con.onclick = function(){
 
 var end = document.querySelector(".end")
 end.onclick = function(){
-    window.history.go(-1);
+    gotoUrl()
 }
+
 function getDirection(startY, endY) { //根据坐标判断是上拉还是下滑
     var dy = startY - endY;
     var result = 0;
@@ -52,3 +53,11 @@ function getDirection(startY, endY) { //根据坐标判断是上拉还是下滑
     }
     return result;
  }
+
+ function gotoUrl(refer){
+    if(refer==""){
+        history.go(-1);
+    }else{
+        window.location.href=refer;
+    }
+}
