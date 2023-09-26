@@ -130,14 +130,15 @@
         function onScanSuccess(decodedText, decodedResult) {
             reader.style.display = "none";
             res.innerText = "扫码成功结果:\n" + decodedText;
-
+            var flag = "";
             var div = document.querySelectorAll(".divSquare")
             if(decodedText== "1号拼图")
             {
                 div[0].className = "divSquare red"
                 window.localStorage.setItem('1', "true")
-                
-                window.location.href="1.html";
+                flag = "1"
+                window.location.href= flag+ ".html";
+                flag = "";
                 return 0;
                
             }
@@ -165,3 +166,13 @@
         function onScanFailure(error) {
             res.innerText = "扫码失败:\n" + error;
         }
+
+        onInit();
+        function onInit(){
+             var addrFrom = localStorage.getItem("addrFrom");
+             if(addrFrom){
+                localStorage.removeItem("addrFrom");
+             }else{
+                 history.go(-2);//这个是关键，点击A页面返回自己跳转到A的上一页
+               }
+         }
