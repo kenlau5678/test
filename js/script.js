@@ -25,7 +25,7 @@
         let res = document.getElementById('qr-reader-results');
         let uploadInput = document.getElementById('upload-input');
         let config = { fps: 10, qrbox: { width: 300, height: 280 } }; //扫一扫相关设置
-
+        window.location.reload()
 
         var a = window.localStorage.getItem('1')
         var b = window.localStorage.getItem('2')
@@ -176,3 +176,5 @@
                  history.go(-2);//这个是关键，点击A页面返回自己跳转到A的上一页
                }
          }
+
+         
