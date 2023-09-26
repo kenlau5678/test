@@ -40,7 +40,7 @@ con.onclick = function(){
 
 var end = document.querySelector(".end")
 end.onclick = function(){
-    gotoUrl()
+    window.location.href= "test.html";
 }
 
 function getDirection(startY, endY) { //根据坐标判断是上拉还是下滑
@@ -53,11 +53,3 @@ function getDirection(startY, endY) { //根据坐标判断是上拉还是下滑
     }
     return result;
  }
-
- function gotoUrl(refer){
-    if(refer==""){
-        history.go(-1);
-    }else{
-        window.location.href=refer;
-    }
-}
