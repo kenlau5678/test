@@ -9,34 +9,44 @@
     <title>scan</title>
     <script src="https://unpkg.com/html5-qrcode"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/1.css">
     
 
 </head>
 
 <body>
-    <p ><img src="asset/_HKMOA-logo_.png" alt=""></p>
-    
-    
-    <!-- 相机、文件方式同时只能使用一个,可根据自己需求修改,如:1.改成下拉框;2.改成tab;3.改成radio等等控制显示隐藏和相应逻辑 -->
-    <button onclick="useCamera()">使用相机扫一扫方式</button>
-    <button onclick="useLocal()">
-        <input type="file" id="upload-input" accept="image/*" value="使用文件方式">
-        <span id="upload-text">使用文件方式</span>
-    </button>
+   <div class="first">
+    <p class="logo"><img src="asset/_HKMOA-logo_.png" alt=""></p>
+    <div class="buttonsss">   
+        <button style="background-color: #f0cc6b; margin-top: 10%;" onclick="useCamera()">使用相机扫一扫方式</button>
+        <button style="background-color: #fae2a2; margin-top: 10%;" onclick="useLocal()">
+            <input type="file" id="upload-input" accept="image/*" value="使用文件方式">
+            <span id="upload-text">使用文件方式</span>
+        </button>
+    </div>
+ 
     <div id="reader"></div>
     <h3 id="qr-reader-results"></h3>
-    <button onclick="window.location.href = '1.html'">1号</button>
-    
-    <div class="divSquare">1</div>
-    <div class="divSquare">2</div>
-    <div style='clear:both'></div>
-    <div class="divSquare">3</div>
-    <div class="divSquare">4</div>
 
+    <div class="box">    
+        <div class="divSquare">1</div>
+        <div class="divSquare">2</div>
+        <div style='clear:both'></div>
+        <div class="divSquare">3</div>
+        <div class="divSquare">4</div>
+    </div>
+   </div>
 
-    
+    <div class="content">
+        <p class="logo"><img src="asset/_HKMOA-logo_.png" alt=""></p>
+
+        <p class="text"><img src="asset/“向上滑动 打开信件”-文字.png" alt=""></p>
+        <p class="arrow"><img src="asset/箭头-“向上滑动”图示.png" alt=""></p>
+        <p class="letter"><img src="asset/大信封拷貝.png" alt=""></p>
+    </div>
+
 <script src='js/script.js'></script>
-
+<script src='js/1.js'></script>
 </body>
 
 

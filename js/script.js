@@ -125,38 +125,39 @@
                 onScanFailure
             );
         }
-
+        var content = document.querySelectorAll(".content")
+        var first = document.querySelector(".first")
         //扫码解析成功后按照自己的需求做后续的操作
         function onScanSuccess(decodedText, decodedResult) {
             reader.style.display = "none";
             res.innerText = "扫码成功结果:\n" + decodedText;
-            var flag = "";
             var div = document.querySelectorAll(".divSquare")
             if(decodedText== "1号拼图")
             {
                 div[0].className = "divSquare red"
-                window.localStorage.setItem('1', "true")
-                window.location.href=  "1.html";
-               
+                
+                content[0].style.display = "block"
+                first.style.display = "none"
+                return 0;
                
             }
             if(decodedText== "2号拼图")
             {
                 div[1].className = "divSquare yellow"
                 window.localStorage.setItem('2', "true")
-                
+                return 0;
             }
             if(decodedText== "3号拼图")
             {
                 div[2].className = "divSquare blue"
                 window.localStorage.setItem('3', "true")
-               
+                return 0;
             }
             if(decodedText== "4号拼图")
             {
                 div[3].className = "divSquare green"
                 window.localStorage.setItem('4', "true")
-                
+                return 0;
             }
         }
 

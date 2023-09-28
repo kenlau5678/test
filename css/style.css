@@ -3,7 +3,14 @@ html,body{
     width:100%;
     height:100%;
   }
-
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    overflow: hidden;
+    height: 100%;
+  }
 
 body {
     background: url(../asset/网页底图.png);
@@ -33,8 +40,9 @@ button {
     opacity: 0;
     filter: alpha(opacity=0);
     display: inline-block;
-    width: 100%;
-    height: 100%;
+    
+    /*width: 100%;
+    height: 100%;*/
 }
 
 #upload-text {
@@ -43,7 +51,8 @@ button {
     user-select: none;
 }
 .divSquare{
-width:48%; height:200px; margin:4px; border:1px solid black; float: left
+width:30%; height:50px; margin:4px; background-color: white;;display:inline-block; 
+
 }
 .red{
     background-color: red;
@@ -94,6 +103,24 @@ width:48%; height:200px; margin:4px; border:1px solid black; float: left
     width: auto;
 }
 
+.box{
+    width: 300px; height: 400px;
+    position: absolute; 
+    left: 50%; 
+    top: 85%;
+    margin-top: -200px;    /* 高度的一半 */
+    margin-left: -150px;    /* 宽度的一半 */
+    text-align: center;
+}
 
+.buttonsss{
+    text-align: center;
+}
+.buttonsss button{
+    display:inline-block; 
+    width: 100px; 
+    height:100px; 
+    margin:5px;
 
+}
  
