@@ -37,8 +37,6 @@
         if(a=="true")
         {
             div[0].className = "divSquare red"
-            
-            
         }
         if(b=="true")
         {
@@ -127,6 +125,9 @@
         }
 
         var one = document.querySelector(".one")
+        var two = document.querySelector(".two")
+        var three = document.querySelector(".three")
+        var four = document.querySelector(".four")
         //扫码解析成功后按照自己的需求做后续的操作
         function onScanSuccess(decodedText, decodedResult) {
             reader.style.display = "none";
@@ -138,6 +139,7 @@
                 div[0].className = "divSquare red"
                 window.localStorage.setItem('1', "true")
                 one.style.display = "block"
+                reader.style.display = "none";
                 
                
             }
@@ -146,13 +148,14 @@
                 div[1].className = "divSquare yellow"
                 window.localStorage.setItem('2', "true")
                 two.style.display = "block"
-                
+                reader.style.display = "none";
             }
             if(decodedText== "3号拼图")
             {
                 div[2].className = "divSquare blue"
                 window.localStorage.setItem('3', "true")
                 three.style.display = "block"
+                reader.style.display = "none";
                 
             }
             if(decodedText== "4号拼图")
@@ -160,9 +163,10 @@
                 div[3].className = "divSquare green"
                 window.localStorage.setItem('4', "true")
                 four.style.display = "block"
+                reader.style.display = "none";
                 
             }
-            reader.style.display = "none";
+            
 
         }
 
@@ -170,7 +174,7 @@
         function onScanFailure(error) {
             res.innerText = "扫码失败:\n" + error;
         }
-
+/*
         onInit();
         function onInit(){
              var addrFrom = localStorage.getItem("addrFrom");
@@ -179,6 +183,6 @@
              }else{
                  history.go(-2);//这个是关键，点击A页面返回自己跳转到A的上一页
                }
-         }
+         } */
 
          
