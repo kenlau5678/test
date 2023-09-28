@@ -145,18 +145,21 @@
             {
                 div[1].className = "divSquare yellow"
                 window.localStorage.setItem('2', "true")
+                two.style.display = "block"
                 
             }
             if(decodedText== "3号拼图")
             {
                 div[2].className = "divSquare blue"
                 window.localStorage.setItem('3', "true")
+                three.style.display = "block"
                 
             }
             if(decodedText== "4号拼图")
             {
                 div[3].className = "divSquare green"
                 window.localStorage.setItem('4', "true")
+                four.style.display = "block"
                 
             }
             reader.style.display = "none";
