@@ -96,6 +96,6 @@ width:48%; height:200px; margin:4px; border:1px solid black; float: left
 
 
 
- .one{
+ .one, .two, .three, .four{
     display: none;
  }
