@@ -58,7 +58,8 @@ html,body{
 
 vertical-align: middle;
 
-text-align: left
+text-align: left;
+margin-top: 10%;
 }
 
 .content .answer{
@@ -69,6 +70,7 @@ text-align: left
     text-align: center;
     border-radius: 3px;
     margin-bottom: 5%;
+    margin-top: 15%;
 }
 
 .content .continue{
