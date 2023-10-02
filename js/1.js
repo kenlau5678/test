@@ -40,7 +40,7 @@ con.onclick = function(){
 
 var end = document.querySelector(".end")
 end.onclick = function(){
-    history.go(-1);
+    window.location.replace(document.referrer);
 }
 
 function getDirection(startY, endY) { //根据坐标判断是上拉还是下滑
