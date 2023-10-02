@@ -19,10 +19,6 @@
     
     <!-- 相机、文件方式同时只能使用一个,可根据自己需求修改,如:1.改成下拉框;2.改成tab;3.改成radio等等控制显示隐藏和相应逻辑 -->
     <button onclick="useCamera()">使用相机扫一扫方式</button>
-    <button onclick="useLocal()">
-        <input type="file" id="upload-input" accept="image/*" value="使用文件方式">
-        <span id="upload-text">使用文件方式</span>
-    </button>
     <div id="reader"></div>
     <h3 id="qr-reader-results"></h3>
     <button  onclick="location.reload();window.location.href = '1.html';this.style.display = 'none';" class="one">1号</button>
