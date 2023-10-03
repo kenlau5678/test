@@ -75,7 +75,7 @@ function getDirection(startY, endY) { //根据坐标判断是上拉还是下滑
         num++;
         element.style.opacity = num/10;
         if(num>=10)  {  clearInterval(st);  }
-        },speed);
+        },70);
     }
 }
 
@@ -87,6 +87,6 @@ function fadeOut(element){
         num--;
         element.style.opacity = num / 10 ;
         if(num<=0)  {   clearInterval(st);  }
-        },speed);
+        },70);
     }
 }
