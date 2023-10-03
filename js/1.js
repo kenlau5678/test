@@ -17,6 +17,9 @@ document.addEventListener('touchend',function (ev) {
              
              
             content[0].style.display = "block"
+            fadeIn(content[0], 200)
+            
+
             break;
         case 2:
              console.log("向下");
@@ -28,14 +31,23 @@ document.addEventListener('touchend',function (ev) {
 
 var buttons = document.querySelectorAll(".buttons")
 buttons[0].onclick = function(){
+    
+    fadeOut(content[0], 200)
     content[0].style.display = "none"
+
+
     content[1].style.display = "block"
+    fadeIn(content[1], 200)
+    
 }
 
 var con = document.querySelector(".continue")
 con.onclick = function(){
+    fadeOut(content[1], 200)
     content[1].style.display = "none"
+    
     content[2].style.display = "block"
+    fadeIn(content[2], 200)
 }
 
 var end = document.querySelector(".end")
@@ -53,3 +65,28 @@ function getDirection(startY, endY) { //根据坐标判断是上拉还是下滑
     }
     return result;
  }
+
+
+ function fadeIn(element,speed){
+    if(element.style.opacity !=1){
+        var speed = speed || 30 ;
+        var num = 0;
+        var st = setInterval(function(){
+        num++;
+        element.style.opacity = num/10;
+        if(num>=10)  {  clearInterval(st);  }
+        },speed);
+    }
+}
+
+function fadeOut(element){
+    if(element.style.opacity !=0){
+        var speed = speed || 30 ;
+        var num = 10;
+        var st = setInterval(function(){
+        num--;
+        element.style.opacity = num / 10 ;
+        if(num<=0)  {   clearInterval(st);  }
+        },speed);
+    }
+}
