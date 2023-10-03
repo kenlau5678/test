@@ -16,9 +16,7 @@
 <body>
     <p class="logo"><img src="asset/logo.png" alt=""></p>
     
-    
-    <!-- 相机、文件方式同时只能使用一个,可根据自己需求修改,如:1.改成下拉框;2.改成tab;3.改成radio等等控制显示隐藏和相应逻辑 -->
-    <button onclick="useCamera()">使用相机扫一扫方式</button>
+    <!-- 相机、文件方式同时只能使用一个,可根据自己需求修改,如:1.改成下拉框;2.改成tab;3.改成radio等等控制显示隐藏和相应逻辑 <button onclick="useCamera()">使用相机扫一扫方式</button>--> 
     <div id="reader"></div>
     <h3 id="qr-reader-results"></h3>
 
@@ -28,24 +26,20 @@
     <button  onclick="location.reload();window.location.href = '4.html';this.style.display = 'none';" class="four">4号</button>
     <button  onclick="location.reload();" >reload</button>
 
-
-
-    <div >
-
+    <div style="display: flex">
         <p class="picture">
             <img src="asset/拼图底图.png" alt=""> 
         </p>
-        <div style="margin: 0 auto;width: 80%;">
+        <div style="margin: 0 auto;width: 80%; ">
             <div class="divSquare"></div> 
             <div class="divSquare"></div>
             <div style='clear:both'></div>
             <div class="divSquare"></div>
             <div class="divSquare"></div>
         </div>
-
-
-
     </div>
+
+    <div class="circle-button" id="circle" onclick="useCamera()">扫一扫</div>
 
 
 

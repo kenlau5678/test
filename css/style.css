@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Noto+Serif:wght@400;500;700&display=swap");*,:after,:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Serif","Noto Serif TC",source-han-serif-tc;
+}
+
 
 html,body{
     width:100%;
@@ -6,6 +18,7 @@ html,body{
     padding: 0;
     overflow: hidden;
     height: 100%;
+    font-family: "Noto Serif","Noto Serif TC",source-han-serif-tc;
   }
 body {
     background: url(../asset/网页底图.png);
@@ -121,4 +134,28 @@ button {
 .pizzle{
     background-size: cover;
     background-image: url(../asset/拼图底图.png);
+}
+
+
+.circle-button {
+    width: 10rem;
+    height: 10rem;
+    background-color: #f0cc6b;
+    border-radius: 50%; /* 使按钮变成圆形 */
+    animation: pulse 0.8s infinite alternate; /* 使用关键帧动画 */
+    margin: 10% auto;
+    line-height: 10rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* 初始大小 */
+    }
+    100% {
+        transform: scale(1.1); /* 变大到1.2倍大小 */
+    }
 }
