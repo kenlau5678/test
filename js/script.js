@@ -183,6 +183,45 @@
                 //this.style.display = 'none';
             }
         }
+        two.onclick = function(){
+            var ran = Math.round(Math.random());
+            if(ran ==1 ){
+                //location.reload();
+                window.location.href = '2a.html';
+                //this.style.display = 'none';
+            }
+            else{
+                //location.reload();
+                window.location.href = '2b.html';
+                //this.style.display = 'none';
+            }
+        }
+        three.onclick = function(){
+            var ran = Math.round(Math.random());
+            if(ran ==1 ){
+                //location.reload();
+                window.location.href = '3a.html';
+                //this.style.display = 'none';
+            }
+            else{
+                //location.reload();
+                window.location.href = '3b.html';
+                //this.style.display = 'none';
+            }
+        }
+        four.onclick = function(){
+            var ran = Math.round(Math.random());
+            if(ran ==1 ){
+                //location.reload();
+                window.location.href = '4a.html';
+                //this.style.display = 'none';
+            }
+            else{
+                //location.reload();
+                window.location.href = '4b.html';
+                //this.style.display = 'none';
+            }
+        }
 
         //扫码解析失败后按照自己的需求做后续的操作
         function onScanFailure(error) {
