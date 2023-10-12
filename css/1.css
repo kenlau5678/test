@@ -58,11 +58,13 @@ html,body{
 
 .question p{
     display: inline-block;
+    
 
-vertical-align: middle;
+    vertical-align: middle;
 
-text-align: left;
-margin-top: 10%;
+    
+    margin-top: 15%;
+    margin-bottom: 13%;
 }
 
 .content .answer{
@@ -74,6 +76,12 @@ margin-top: 10%;
     border-radius: 3px;
     margin-bottom: 5%;
     margin-top: 15%;
+    
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center; /* 水平居中 */ 
+    align-items: center;
 }
 
 .content .continue{
@@ -82,7 +90,6 @@ margin-top: 10%;
     float: right;
     position:relative;
     right: 5%;
-    top: 40%;
     text-align: right;
 }
 
@@ -113,6 +120,6 @@ margin-top: 10%;
     height: 50px;
     
     position:relative;
-    top: 80%;
+    top: 20%;
 
 }

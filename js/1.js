@@ -29,8 +29,8 @@ document.addEventListener('touchend',function (ev) {
     }
   }, false);
 
-var buttons = document.querySelectorAll(".buttons")
-buttons[0].onclick = function(){
+var btrue = document.querySelector(".Btrue")
+btrue.onclick = function(){
     
     fadeOut(content[0], 200)
     content[0].style.display = "none"

@@ -170,6 +170,20 @@
 
         }
 
+        one.onclick = function(){
+            var ran = Math.round(Math.random());
+            if(ran ==1 ){
+                //location.reload();
+                window.location.href = '1a.html';
+                //this.style.display = 'none';
+            }
+            else{
+                //location.reload();
+                window.location.href = '1b.html';
+                //this.style.display = 'none';
+            }
+        }
+
         //扫码解析失败后按照自己的需求做后续的操作
         function onScanFailure(error) {
             res.innerText = "扫码失败:\n" + error;
