@@ -123,3 +123,19 @@ html,body{
     top: 20%;
 
 }
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 两列 */
+    grid-template-rows: repeat(2, 1fr);    /* 两行 */
+    width: 230px; /* 设置容器宽度 */
+    margin: 0 auto;
+}
+
+.button-container button {
+        text-align: center;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}

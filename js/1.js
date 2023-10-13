@@ -41,6 +41,17 @@ btrue.onclick = function(){
     
 }
 
+var wrong = document.querySelectorAll(".wrong")
+
+
+for(var i=0;i<wrong.length;i++){
+    (function(i){
+        wrong[i].onclick = function(){
+            this.style.boxShadow = "0 0 20px rgb(219, 88, 52)"
+        }
+    })(i);
+}
+
 var con = document.querySelector(".continue")
 con.onclick = function(){
     fadeOut(content[1], 200)
