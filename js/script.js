@@ -124,13 +124,13 @@
             );
         }
 
-       // var one = document.querySelector(".one")
+        var one = document.querySelector(".one")
         //var two = document.querySelector(".two")
         //var three = document.querySelector(".three")
         //var four = document.querySelector(".four")
 
-        var enterB = document.querySelector(".enter")
-        enterB.style.visibility = "visible";
+        // var enterB = document.querySelector(".enter")
+        // enterB.style.visibility = "visible";
         //扫码解析成功后按照自己的需求做后续的操作
         function onScanSuccess(decodedText, decodedResult) {
             reader.style.display = "none";
@@ -138,7 +138,7 @@
             
             var div = document.querySelectorAll(".divSquare")
             var pic = document.querySelectorAll(".pic")
-            
+        
             var get = document.querySelector(".get")
             if(decodedText== "1号拼图")
             {
@@ -146,9 +146,9 @@
                 div[0].className = "divSquare red"
                 window.localStorage.setItem('1', "true")
                 reader.style.display = "none"
-                enterB.style.visibility = "visible";
+                one.style.visibility = "visible";
                 get.style.visibility = "visible";
-                enterB.dataset.indexNumber = 1;
+                one.dataset.indexNumber = 1;
             }
             if(decodedText== "2号拼图")
             {
@@ -156,9 +156,9 @@
                 div[1].className = "divSquare yellow"
                 window.localStorage.setItem('2', "true")
                 reader.style.display = "none"
-                enterB.style.visibility = "visible";
+                one.style.visibility = "visible";
                 get.style.visibility = "visible";
-                enterB.dataset.indexNumber = 2;
+                one.dataset.indexNumber = 2;
             }
             if(decodedText== "3号拼图")
             {
@@ -166,24 +166,26 @@
                 div[2].className = "divSquare blue"
                 window.localStorage.setItem('3', "true")
                 reader.style.display = "none"
-                enterB.style.visibility = "visible";
+                one.style.visibility = "visible";
                 get.style.visibility = "visible";
-                enterB.dataset.indexNumber = 3;
+                one.dataset.indexNumber = 3;
             }
             if(decodedText== "4号拼图")
             {
                 div[3].className = "divSquare green"
                 window.localStorage.setItem('4', "true")
                 reader.style.display = "none"
-                enterB.style.visibility = "visible";
+                one.style.visibility = "visible";
                 get.style.visibility = "visible";
-                enterB.dataset.indexNumber = 4;
+                one.dataset.indexNumber = 4;
                 
             }
 
         }
-        enterB.onclick = function(){
-            var i =  enterB.dataset.indexNumber;
+
+
+        one.onclick = function(){
+            var i =  one.dataset.indexNumber;
             var ran = Math.round(Math.random());
             if(ran ==1 ){
                 //location.reload();
@@ -195,6 +197,11 @@
                 window.location.href = i+'b'+'.html';
                 //this.style.display = 'none';
             }
+        }
+
+        function onScanFailure(error) 
+        {
+            res.innerText = "扫码失败:\n" + error;
         }
 
 
@@ -252,9 +259,7 @@
         // }
 
         //扫码解析失败后按照自己的需求做后续的操作
-        function onScanFailure(error) {
-            res.innerText = "扫码失败:\n" + error;
-        }
+
 /*
         onInit();
         function onInit(){
