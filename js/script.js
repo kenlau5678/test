@@ -36,19 +36,19 @@
         var div = document.querySelectorAll(".divSquare")
         if(a=="true")
         {
-            div[0].className = "divSquare red"
+            pic[0].style.visibility = "visible"
         }
         if(b=="true")
         {
-            div[1].className = "divSquare yellow"
+            pic[1].style.visibility = "visible"
         }
         if(c=="true")
         {
-            div[2].className = "divSquare blue"
+            pic[2].style.visibility = "visible"
         }
         if(d=="true")
         {
-            div[3].className = "divSquare green"
+            pic[3].style.visibility = "visible"
         }
 
 
@@ -124,51 +124,78 @@
             );
         }
 
-        var one = document.querySelector(".one")
-        var two = document.querySelector(".two")
-        var three = document.querySelector(".three")
-        var four = document.querySelector(".four")
+       // var one = document.querySelector(".one")
+        //var two = document.querySelector(".two")
+        //var three = document.querySelector(".three")
+        //var four = document.querySelector(".four")
+        var enter = document.querySelector(".enter")
+        var get = document.querySelector(".get")
+
+
         //扫码解析成功后按照自己的需求做后续的操作
         function onScanSuccess(decodedText, decodedResult) {
             reader.style.display = "none";
             res.innerText = "扫码成功结果:\n" + decodedText;
             var flag = "";
             var div = document.querySelectorAll(".divSquare")
+            var pic = document.querySelectorAll(".pic")
             if(decodedText== "1号拼图")
             {
+                
                 div[0].className = "divSquare red"
                 window.localStorage.setItem('1', "true")
-                one.style.display = "block"
-                reader.style.display = "none";
-                
-               
+                reader.style.display = "none"
+                enter.style.visibility = "visible";
+                get.style.visibility = "visible";
+                enter.dataset.indexNumber = 1;
             }
             if(decodedText== "2号拼图")
             {
+                
                 div[1].className = "divSquare yellow"
                 window.localStorage.setItem('2', "true")
-                two.style.display = "block"
-                reader.style.display = "none";
+                reader.style.display = "none"
+                enter.style.visibility = "visible";
+                get.style.visibility = "visible";
+                enter.dataset.indexNumber = 2;
             }
             if(decodedText== "3号拼图")
             {
+                
                 div[2].className = "divSquare blue"
                 window.localStorage.setItem('3', "true")
-                three.style.display = "block"
-                reader.style.display = "none";
-                
+                reader.style.display = "none"
+                enter.style.visibility = "visible";
+                get.style.visibility = "visible";
+                enter.dataset.indexNumber = 3;
             }
             if(decodedText== "4号拼图")
             {
                 div[3].className = "divSquare green"
                 window.localStorage.setItem('4', "true")
-                four.style.display = "block"
-                reader.style.display = "none";
+                reader.style.display = "none"
+                enter.style.visibility = "visible";
+                get.style.visibility = "visible";
+                enter.dataset.indexNumber = 4;
                 
             }
-            
 
         }
+        enter.onclick = function(){
+            var i =  enter.dataset.indexNumber;
+            var ran = Math.round(Math.random());
+            if(ran ==1 ){
+                //location.reload();
+                window.location.href = i+'a'+'.html';
+                //this.style.display = 'none';
+            }
+            else{
+                //location.reload();
+                window.location.href = i+'b'+'.html';
+                //this.style.display = 'none';
+            }
+        }
+
 
         one.onclick = function(){
             var ran = Math.round(Math.random());
