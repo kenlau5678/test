@@ -133,6 +133,11 @@
         // var enterB = document.querySelector(".enter")
         // enterB.style.visibility = "visible";
         //扫码解析成功后按照自己的需求做后续的操作
+        function onScanFailure(error) 
+        {
+            res.innerText = "扫码失败:\n" + error;
+        }
+
         function onScanSuccess(decodedText, decodedResult) {
             reader.style.display = "none";
             res.innerText = "扫码成功结果:\n" + decodedText;
@@ -147,9 +152,9 @@
                 div[0].className = "divSquare red"
                 window.localStorage.setItem('1', "true")
                 reader.style.display = "none"
-                enter.className = "enter show"
+                entry.style.visibility = "visible";
                 get.style.visibility = "visible";
-                enter.dataset.indexNumber = 1;
+                entry.dataset.indexNumber = 1;
             }
             if(decodedText== "2号拼图")
             {
@@ -157,9 +162,9 @@
                 div[1].className = "divSquare yellow"
                 window.localStorage.setItem('2', "true")
                 reader.style.display = "none"
-                enter.className = "enter show"
+                entry.style.visibility = "visible";
                 get.style.visibility = "visible";
-                enter.dataset.indexNumber = 2;
+                entry.dataset.indexNumber = 2;
             }
             if(decodedText== "3号拼图")
             {
@@ -167,18 +172,18 @@
                 div[2].className = "divSquare blue"
                 window.localStorage.setItem('3', "true")
                 reader.style.display = "none"
-                enter.className = "enter show"
+                entry.style.visibility = "visible";
                 get.style.visibility = "visible";
-                enter.dataset.indexNumber = 3;
+                entry.dataset.indexNumber = 3;
             }
             if(decodedText== "4号拼图")
             {
                 div[3].className = "divSquare green"
                 window.localStorage.setItem('4', "true")
                 reader.style.display = "none"
-                enter.className = "enter show"
+                entry.style.visibility = "visible";
                 get.style.visibility = "visible";
-                enter.dataset.indexNumber = 4;
+                entry.dataset.indexNumber = 4;
   
             }
         }
@@ -199,10 +204,6 @@
         //     }
         // }
 
-        function onScanFailure(error) 
-        {
-            res.innerText = "扫码失败:\n" + error;
-        }
 
 
         // one.onclick = function(){
