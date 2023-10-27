@@ -124,12 +124,17 @@
             );
         }
 
+
+
+        
         var entry = document.querySelector(".entry");
         entry.style.visibility = "visible";
-        //var two = document.querySelector(".two")
-        //var three = document.querySelector(".three")
-        //var four = document.querySelector(".four")
+        var one = document.querySelector(".one")
+        var two = document.querySelector(".two")
+        var three = document.querySelector(".three")
+        var four = document.querySelector(".four")
 
+        one.style.display = "none"
         // var enterB = document.querySelector(".enter")
         // enterB.style.visibility = "visible";
         //扫码解析成功后按照自己的需求做后续的操作
@@ -150,11 +155,11 @@
             {
                 
                 div[0].className = "divSquare red"
-                window.localStorage.setItem('1', "true")
                 reader.style.display = "none"
-                entry.style.visibility = "visible";
                 get.style.visibility = "visible";
+                entry.style.visibility = "visible";
                 entry.dataset.indexNumber = 1;
+                window.localStorage.setItem('1', "true")
             }
             if(decodedText== "2号拼图")
             {
@@ -189,75 +194,75 @@
         }
 
 
-        // one.onclick = function(){
-        //     var i =  one.dataset.indexNumber;
-        //     var ran = Math.round(Math.random());
-        //     if(ran ==1 ){
-        //         //location.reload();
-        //         window.location.href = i+'a'+'.html';
-        //         //this.style.display = 'none';
-        //     }
-        //     else{
-        //         //location.reload();
-        //         window.location.href = i+'b'+'.html';
-        //         //this.style.display = 'none';
-        //     }
-        // }
+        one.onclick = function(){
+            var i =  one.dataset.indexNumber;
+            var ran = Math.round(Math.random());
+            if(ran ==1 ){
+                //location.reload();
+                window.location.href = i+'a'+'.html';
+                //this.style.display = 'none';
+            }
+            else{
+                //location.reload();
+                window.location.href = i+'b'+'.html';
+                //this.style.display = 'none';
+            }
+        }
 
 
 
-        // one.onclick = function(){
-        //     var ran = Math.round(Math.random());
-        //     if(ran ==1 ){
-        //         //location.reload();
-        //         window.location.href = '1a.html';
-        //         //this.style.display = 'none';
-        //     }
-        //     else{
-        //         //location.reload();
-        //         window.location.href = '1b.html';
-        //         //this.style.display = 'none';
-        //     }
-        // }
-        // two.onclick = function(){
-        //     var ran = Math.round(Math.random());
-        //     if(ran ==1 ){
-        //         //location.reload();
-        //         window.location.href = '2a.html';
-        //         //this.style.display = 'none';
-        //     }
-        //     else{
-        //         //location.reload();
-        //         window.location.href = '2b.html';
-        //         //this.style.display = 'none';
-        //     }
-        // }
-        // three.onclick = function(){
-        //     var ran = Math.round(Math.random());
-        //     if(ran ==1 ){
-        //         //location.reload();
-        //         window.location.href = '3a.html';
-        //         //this.style.display = 'none';
-        //     }
-        //     else{
-        //         //location.reload();
-        //         window.location.href = '3b.html';
-        //         //this.style.display = 'none';
-        //     }
-        // }
-        // four.onclick = function(){
-        //     var ran = Math.round(Math.random());
-        //     if(ran ==1 ){
-        //         //location.reload();
-        //         window.location.href = '4a.html';
-        //         //this.style.display = 'none';
-        //     }
-        //     else{
-        //         //location.reload();
-        //         window.location.href = '4b.html';
-        //         //this.style.display = 'none';
-        //     }
-        // }
+        one.onclick = function(){
+            var ran = Math.round(Math.random());
+            if(ran ==1 ){
+                //location.reload();
+                window.location.href = '1a.html';
+                //this.style.display = 'none';
+            }
+            else{
+                //location.reload();
+                window.location.href = '1b.html';
+                //this.style.display = 'none';
+            }
+        }
+        two.onclick = function(){
+            var ran = Math.round(Math.random());
+            if(ran ==1 ){
+                //location.reload();
+                window.location.href = '2a.html';
+                //this.style.display = 'none';
+            }
+            else{
+                //location.reload();
+                window.location.href = '2b.html';
+                //this.style.display = 'none';
+            }
+        }
+        three.onclick = function(){
+            var ran = Math.round(Math.random());
+            if(ran ==1 ){
+                //location.reload();
+                window.location.href = '3a.html';
+                //this.style.display = 'none';
+            }
+            else{
+                //location.reload();
+                window.location.href = '3b.html';
+                //this.style.display = 'none';
+            }
+        }
+        four.onclick = function(){
+            var ran = Math.round(Math.random());
+            if(ran ==1 ){
+                //location.reload();
+                window.location.href = '4a.html';
+                //this.style.display = 'none';
+            }
+            else{
+                //location.reload();
+                window.location.href = '4b.html';
+                //this.style.display = 'none';
+            }
+        }
 
         //扫码解析失败后按照自己的需求做后续的操作
 
@@ -271,5 +276,8 @@
                  history.go(-2);//这个是关键，点击A页面返回自己跳转到A的上一页
                }
          } */
+
+
+
 
          

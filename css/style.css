@@ -195,3 +195,7 @@ button {
 .show{
     visibility: visible;
 }
+
+.one, .two, .three, .four{
+    display: block;
+}
