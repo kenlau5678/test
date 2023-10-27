@@ -128,10 +128,9 @@
         //var two = document.querySelector(".two")
         //var three = document.querySelector(".three")
         //var four = document.querySelector(".four")
-        var enter = document.querySelector(".enter")
-        var get = document.querySelector(".get")
-       
 
+        var enter = document.querySelector(".enter")
+        enter.style.visibility = "visible";
         //扫码解析成功后按照自己的需求做后续的操作
         function onScanSuccess(decodedText, decodedResult) {
             reader.style.display = "none";
@@ -139,6 +138,8 @@
             var flag = "";
             var div = document.querySelectorAll(".divSquare")
             var pic = document.querySelectorAll(".pic")
+            
+            var get = document.querySelector(".get")
             if(decodedText== "1号拼图")
             {
                 
