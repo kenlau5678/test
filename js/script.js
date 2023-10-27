@@ -124,7 +124,7 @@
             );
         }
 
-        var one = document.querySelector(".one")
+        var enter = document.querySelector(".enter")
         //var two = document.querySelector(".two")
         //var three = document.querySelector(".three")
         //var four = document.querySelector(".four")
@@ -146,9 +146,9 @@
                 div[0].className = "divSquare red"
                 window.localStorage.setItem('1', "true")
                 reader.style.display = "none"
-                one.style.visibility = "visible";
+                enter.className = "enter show"
                 get.style.visibility = "visible";
-                one.dataset.indexNumber = 1;
+                enter.dataset.indexNumber = 1;
             }
             if(decodedText== "2号拼图")
             {
@@ -156,9 +156,9 @@
                 div[1].className = "divSquare yellow"
                 window.localStorage.setItem('2', "true")
                 reader.style.display = "none"
-                one.style.visibility = "visible";
+                enter.className = "enter show"
                 get.style.visibility = "visible";
-                one.dataset.indexNumber = 2;
+                enter.dataset.indexNumber = 2;
             }
             if(decodedText== "3号拼图")
             {
@@ -166,38 +166,37 @@
                 div[2].className = "divSquare blue"
                 window.localStorage.setItem('3', "true")
                 reader.style.display = "none"
-                one.style.visibility = "visible";
+                enter.className = "enter show"
                 get.style.visibility = "visible";
-                one.dataset.indexNumber = 3;
+                enter.dataset.indexNumber = 3;
             }
             if(decodedText== "4号拼图")
             {
                 div[3].className = "divSquare green"
                 window.localStorage.setItem('4', "true")
                 reader.style.display = "none"
-                one.style.visibility = "visible";
+                enter.className = "enter show"
                 get.style.visibility = "visible";
-                one.dataset.indexNumber = 4;
-                
-            }
-
-        }
-
-
-        one.onclick = function(){
-            var i =  one.dataset.indexNumber;
-            var ran = Math.round(Math.random());
-            if(ran ==1 ){
-                //location.reload();
-                window.location.href = i+'a'+'.html';
-                //this.style.display = 'none';
-            }
-            else{
-                //location.reload();
-                window.location.href = i+'b'+'.html';
-                //this.style.display = 'none';
+                enter.dataset.indexNumber = 4;
+  
             }
         }
+
+
+        // one.onclick = function(){
+        //     var i =  one.dataset.indexNumber;
+        //     var ran = Math.round(Math.random());
+        //     if(ran ==1 ){
+        //         //location.reload();
+        //         window.location.href = i+'a'+'.html';
+        //         //this.style.display = 'none';
+        //     }
+        //     else{
+        //         //location.reload();
+        //         window.location.href = i+'b'+'.html';
+        //         //this.style.display = 'none';
+        //     }
+        // }
 
         function onScanFailure(error) 
         {
