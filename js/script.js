@@ -129,13 +129,13 @@
         //var three = document.querySelector(".three")
         //var four = document.querySelector(".four")
 
-        var enter = document.querySelector(".enter")
-        enter.style.visibility = "visible";
+        var enterB = document.querySelector(".enter")
+        enterB.style.visibility = "visible";
         //扫码解析成功后按照自己的需求做后续的操作
         function onScanSuccess(decodedText, decodedResult) {
             reader.style.display = "none";
             res.innerText = "扫码成功结果:\n" + decodedText;
-            var flag = "";
+            
             var div = document.querySelectorAll(".divSquare")
             var pic = document.querySelectorAll(".pic")
             
@@ -146,9 +146,9 @@
                 div[0].className = "divSquare red"
                 window.localStorage.setItem('1', "true")
                 reader.style.display = "none"
-                enter.style.visibility = "visible";
+                enterB.style.visibility = "visible";
                 get.style.visibility = "visible";
-                enter.dataset.indexNumber = 1;
+                enterB.dataset.indexNumber = 1;
             }
             if(decodedText== "2号拼图")
             {
@@ -156,9 +156,9 @@
                 div[1].className = "divSquare yellow"
                 window.localStorage.setItem('2', "true")
                 reader.style.display = "none"
-                enter.style.visibility = "visible";
+                enterB.style.visibility = "visible";
                 get.style.visibility = "visible";
-                enter.dataset.indexNumber = 2;
+                enterB.dataset.indexNumber = 2;
             }
             if(decodedText== "3号拼图")
             {
@@ -166,24 +166,24 @@
                 div[2].className = "divSquare blue"
                 window.localStorage.setItem('3', "true")
                 reader.style.display = "none"
-                enter.style.visibility = "visible";
+                enterB.style.visibility = "visible";
                 get.style.visibility = "visible";
-                enter.dataset.indexNumber = 3;
+                enterB.dataset.indexNumber = 3;
             }
             if(decodedText== "4号拼图")
             {
                 div[3].className = "divSquare green"
                 window.localStorage.setItem('4', "true")
                 reader.style.display = "none"
-                enter.style.visibility = "visible";
+                enterB.style.visibility = "visible";
                 get.style.visibility = "visible";
-                enter.dataset.indexNumber = 4;
+                enterB.dataset.indexNumber = 4;
                 
             }
 
         }
-        enter.onclick = function(){
-            var i =  enter.dataset.indexNumber;
+        enterB.onclick = function(){
+            var i =  enterB.dataset.indexNumber;
             var ran = Math.round(Math.random());
             if(ran ==1 ){
                 //location.reload();
