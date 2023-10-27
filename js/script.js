@@ -130,7 +130,7 @@
         //var four = document.querySelector(".four")
         var enter = document.querySelector(".enter")
         var get = document.querySelector(".get")
-
+       
 
         //扫码解析成功后按照自己的需求做后续的操作
         function onScanSuccess(decodedText, decodedResult) {

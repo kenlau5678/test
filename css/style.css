@@ -178,11 +178,12 @@ button {
 .enter{
     text-align: center;
     margin-top: 10%;
+    visibility: hidden;
 }
 
 .enter img{
     width: 53%;
-    visibility: hidden;
+    
 }
 
 .get{
