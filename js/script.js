@@ -124,7 +124,8 @@
             );
         }
 
-        var enter = document.querySelector(".enter")
+        var entry = document.querySelector(".entry");
+        entry.start.visibility = "visible";
         //var two = document.querySelector(".two")
         //var three = document.querySelector(".three")
         //var four = document.querySelector(".four")
