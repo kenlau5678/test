@@ -34,6 +34,7 @@
 
 
         var div = document.querySelectorAll(".divSquare")
+        var pic = document.querySelectorAll(".pic")
         if(a=="true")
         {
             pic[0].style.visibility = "visible"
@@ -148,7 +149,7 @@
             res.innerText = "扫码成功结果:\n" + decodedText;
             
             var div = document.querySelectorAll(".divSquare")
-            var pic = document.querySelectorAll(".pic")
+            
         
             var get = document.querySelector(".get")
             if(decodedText== "1号拼图")
