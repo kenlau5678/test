@@ -159,15 +159,15 @@ button {
 }
 
 .scan{
-    width: 100%;
-    margin-bottom: -25%;
-    margin-top: -25%;
+    width: 70%;
+    margin-bottom: -10%;
+    margin-top: -10%;
 }
 
 .scantext{
     text-align: center;
     color: #fff;
-    margin-top:10%;
+    margin-top: 5%;
     font-size: 30px;
 }
 .hint{
@@ -177,7 +177,7 @@ button {
 
 .enter{
     text-align: center;
-    margin-top: 13%;
+    margin-top: 15%;
 }
 
 .enter img{
