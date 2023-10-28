@@ -44,19 +44,19 @@
     </div>
 
 
-    <div class="enter"><img src="asset/點擊進入.png" alt=""  class="entry" style="visibility: hidden;"></div>
+    <div class="enter"><img src="asset/點擊進入.png" alt=""  class="entry" style="visibility: hidden;" data-indexNumber="0"></div>
 
-    <!--<div class="circle-button" id="circle" onclick="useCamera()">扫一扫</div>     -->
-    <button  class="one">1号</button>
+    <!--<div class="circle-button" id="circle" onclick="useCamera()">扫一扫</div>        <button  class="one">1号</button>
     <button  class="two">2号</button>
     <button   class="three">3号</button>
-    <button   class="four">4号</button>
+    <button   class="four">4号</button>    <div class="circle-button" id="circle" onclick="useCamera()">扫一扫</div> -->
+
 
     <div id="reader"></div>
     <h3 id="qr-reader-results"></h3>
 
 
-    <div class="circle-button" id="circle" onclick="useCamera()">扫一扫</div>
+
     <p class="scantext">掃一掃</p>
     <p style="text-align: center;"><img src="asset/scan.png" onclick="useCamera()" class="scan"><img src="asset/（請允許您的瀏覽器取用相機權限）.png" alt="" class="hint"></p>
     
@@ -71,7 +71,137 @@
 
 
 
-<script src='js/script.js'></script>
+<script>
+//1.Html5QrcodeScanner是js提供的ui; 2.Html5Qrcode是自定义面板
+let html5QrCode = new Html5Qrcode("reader"); 
+        let reader = document.getElementById("reader");
+        let res = document.getElementById('qr-reader-results');
+        let uploadInput = document.getElementById('upload-input');
+        let config = { fps: 10, qrbox: { width: 300, height: 280 } }; //扫一扫相关设置
+
+        //使用本地文件
+        function useLocal() {
+            reader.style.display = "none";
+            res.innerText = "";
+            uploadInput.addEventListener("change", (e) => {
+                if (e.target.files.length == 0) {
+                    return;
+                }
+                const imageFile = e.target.files[0];
+                html5QrCode
+                    .scanFile(imageFile, true)
+                    .then((decodedText) => {
+                        res.innerText = "扫码成功结果:\n" + decodedText;
+                    })
+                    .catch((err) => {
+                        res.innerText = "扫码失败:\n" + error;
+                    });
+            });
+        }
+
+       //相机授权
+        function useCamera() {
+            reader.style.display = "block";
+            res.innerText = "";
+            Html5Qrcode.getCameras()
+                .then((devices) => {
+                    if (devices && devices.length) {
+                        let cameraId = "";
+                        if (devices.length == 1) {
+                            cameraId = devices[0].id; //前置摄像头
+                        } else {
+                            cameraId = devices[1].id;  //后置摄像头
+                        }
+                        if (cameraId) {
+                            startWithCameraId(cameraId);
+                        }
+                    } else {
+                        startWithoutCameraId();
+                    }
+                })
+                .catch((err) => {
+                    console.log("没有获取摄像头设备...");
+                });
+        }
+
+        //带相机ID扫描
+        function startWithCameraId(cameraId) {
+            html5QrCode
+                .start(
+                    { deviceId: { exact: cameraId } },
+                    config,
+                    onScanSuccess,
+                    onScanFailure
+                )
+                .catch((err) => {
+                    console.log("通过摄像头扫码异常....", err);
+                });
+        }
+
+        //不带相机ID扫描,允许传递约束来代替相机设备 ID
+        function startWithoutCameraId() {
+            //environment 表示后置摄像头  换成user则表示前置摄像头
+            html5QrCode.start(
+                { facingMode: "environment" } || {
+                    facingMode: { exact: "environment" },
+                },
+                config,
+                onScanSuccess,
+                onScanFailure
+            );
+        }
+
+        var entry = document.querySelector(".entry")
+        //扫码解析成功后按照自己的需求做后续的操作
+        function onScanSuccess(decodedText, decodedResult) {
+            res.innerText = "扫码成功结果:\n" + decodedText;
+
+
+            if(decodedText== "1号拼图")
+            {
+                entry.style.visibility = "visible"
+                entry.dataset.indexNumber = "1"
+            }
+            else if(decodedText== "2号拼图")
+            {
+                entry.style.visibility = "visible"
+                entry.dataset.indexNumber = "2"
+            }
+            else if(decodedText== "3号拼图")
+            {
+                entry.style.visibility = "visible"
+                entry.dataset.indexNumber = "3"
+            }
+            else if(decodedText== "4号拼图")
+            {
+                entry.style.visibility = "visible"
+                entry.dataset.indexNumber = "4"
+            }
+
+        }
+       
+
+        entry.onclick = function(){
+            var i =  entry.dataset.indexNumber;
+            var ran = Math.round(Math.random());
+             if(ran ==1 ){
+                 location.reload();
+                 window.location.href = i+'a'+'.html';
+                 this.style.visibility = 'hidden';
+             }
+             else{
+                 location.reload();
+                 window.location.href = i+'b'+'.html';
+                 this.style.visibility = 'hidden';
+             }
+        }
+        //扫码解析失败后按照自己的需求做后续的操作
+        function onScanFailure(error) {
+            res.innerText = "扫码失败:\n" + error;
+        }
+
+
+</script>
 
 </body>
 
