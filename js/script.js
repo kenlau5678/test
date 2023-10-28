@@ -127,8 +127,8 @@
 
 
         
-        var entry = document.querySelector(".entry");
-        entry.style.visibility = "visible";
+        //var entry = document.querySelector(".entry");
+        //entry.style.visibility = "visible";
         var one = document.querySelector(".one")
         var two = document.querySelector(".two")
         var three = document.querySelector(".three")
@@ -194,20 +194,20 @@
         }
 
 
-        one.onclick = function(){
-            var i =  one.dataset.indexNumber;
-            var ran = Math.round(Math.random());
-            if(ran ==1 ){
-                //location.reload();
-                window.location.href = i+'a'+'.html';
-                //this.style.display = 'none';
-            }
-            else{
-                //location.reload();
-                window.location.href = i+'b'+'.html';
-                //this.style.display = 'none';
-            }
-        }
+        // one.onclick = function(){
+        //     var i =  one.dataset.indexNumber;
+        //     var ran = Math.round(Math.random());
+        //     if(ran ==1 ){
+        //         //location.reload();
+        //         window.location.href = i+'a'+'.html';
+        //         //this.style.display = 'none';
+        //     }
+        //     else{
+        //         //location.reload();
+        //         window.location.href = i+'b'+'.html';
+        //         //this.style.display = 'none';
+        //     }
+        // }
 
 
 
