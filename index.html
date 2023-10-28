@@ -152,7 +152,7 @@ let html5QrCode = new Html5Qrcode("reader");
         }
 
         var entry = document.querySelector(".entry")
-        var get = document.querySelector(".get")
+        var getImg = document.querySelector(".get")
         //扫码解析成功后按照自己的需求做后续的操作
         function onScanSuccess(decodedText, decodedResult) {
             res.innerText = "扫码成功结果:\n" + decodedText;
@@ -162,28 +162,28 @@ let html5QrCode = new Html5Qrcode("reader");
             if(decodedText== "1号拼图")
             {
                 reader.style.display = "none"
-                get.style.visibility = "visible";
+                getImg.style.visibility = "visible";
                 entry.style.visibility = "visible"
                 entry.dataset.indexNumber = "1"
             }
             else if(decodedText== "2号拼图")
             {
                 reader.style.display = "none"
-                get.style.visibility = "visible";
+                 getImg.style.visibility = "visible";
                 entry.style.visibility = "visible"
                 entry.dataset.indexNumber = "2"
             }
             else if(decodedText== "3号拼图")
             {
                 reader.style.display = "none"
-                get.style.visibility = "visible";
+                 getImg.style.visibility = "visible";
                 entry.style.visibility = "visible"
                 entry.dataset.indexNumber = "3"
             }
             else if(decodedText== "4号拼图")
             {
                 reader.style.display = "none"
-                get.style.visibility = "visible";
+                getImg.style.visibility = "visible";
                 entry.style.visibility = "visible"
                 entry.dataset.indexNumber = "4"
             }
