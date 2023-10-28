@@ -61,42 +61,32 @@
     <p style="text-align: center;"><img src="asset/scan.png" onclick="useCamera()" class="scan"><img src="asset/（請允許您的瀏覽器取用相機權限）.png" alt="" class="hint"></p>
     
     
-
-
-
-
-
-
-
-
-
-
 <script>
 
 
 var a = window.localStorage.getItem('1')
-        var b = window.localStorage.getItem('2')
-        var c = window.localStorage.getItem('3')
-        var d = window.localStorage.getItem('4')
+var b = window.localStorage.getItem('2')
+var c = window.localStorage.getItem('3')
+var d = window.localStorage.getItem('4')
 
 
         
-        if(a=="true")
-        {
-            pic[0].style.visibility = "visible"
-        }
-        if(b=="true")
-        {
-            pic[1].style.visibility = "visible"
-        }
-        if(c=="true")
-        {
-            pic[2].style.visibility = "visible"
-        }
-        if(d=="true")
-        {
-            pic[3].style.visibility = "visible"
-        }
+if(a=="true")
+{
+    pic[0].style.visibility = "visible"
+}
+if(b=="true")
+{
+    pic[1].style.visibility = "visible"
+}
+if(c=="true")
+{
+    pic[2].style.visibility = "visible"
+}
+if(d=="true")
+{
+    pic[3].style.visibility = "visible"
+}
 //1.Html5QrcodeScanner是js提供的ui; 2.Html5Qrcode是自定义面板
 let html5QrCode = new Html5Qrcode("reader"); 
         let reader = document.getElementById("reader");
