@@ -152,6 +152,7 @@ let html5QrCode = new Html5Qrcode("reader");
         }
 
         var entry = document.querySelector(".entry")
+        var get = document.querySelector(".get")
         //扫码解析成功后按照自己的需求做后续的操作
         function onScanSuccess(decodedText, decodedResult) {
             res.innerText = "扫码成功结果:\n" + decodedText;
