@@ -157,23 +157,32 @@ let html5QrCode = new Html5Qrcode("reader");
             res.innerText = "扫码成功结果:\n" + decodedText;
 
 
+
             if(decodedText== "1号拼图")
             {
+                reader.style.display = "none"
+                get.style.visibility = "visible";
                 entry.style.visibility = "visible"
                 entry.dataset.indexNumber = "1"
             }
             else if(decodedText== "2号拼图")
             {
+                reader.style.display = "none"
+                get.style.visibility = "visible";
                 entry.style.visibility = "visible"
                 entry.dataset.indexNumber = "2"
             }
             else if(decodedText== "3号拼图")
             {
+                reader.style.display = "none"
+                get.style.visibility = "visible";
                 entry.style.visibility = "visible"
                 entry.dataset.indexNumber = "3"
             }
             else if(decodedText== "4号拼图")
             {
+                reader.style.display = "none"
+                get.style.visibility = "visible";
                 entry.style.visibility = "visible"
                 entry.dataset.indexNumber = "4"
             }
