@@ -4,6 +4,7 @@ document.addEventListener('touchstart',function (ev) {
 }, false);
 
 var content = document.querySelectorAll(".content")
+var slide = document.querySelector(".slide")
 document.addEventListener('touchend',function (ev) {
     var endY;//定义结束时候的坐标位置
     endY = ev.changedTouches[0].pageY;
@@ -13,8 +14,10 @@ document.addEventListener('touchend',function (ev) {
                 console.log("不变");
             break;
         case 1:
-             console.log("  向上");
-             
+             console.log("向上");
+
+             fadeOut(slide, 200)
+            slide.style.display = "none"
              
             content[0].style.display = "block"
             fadeIn(content[0], 200)
